@@ -11,16 +11,16 @@ const arrayList = [
 ];
 
 function renderTask(el, index){
-    return <div>
+    return <div key={index}>
     <p>{el.task}</p>
-    </div>
+    </div>;
 }
 
 
 export function ListComponent(props){
-    return
+    return <div>
     {arrayList.map((el, index)=>
     renderTask(index, el))}
-
+</div>
 }
 
