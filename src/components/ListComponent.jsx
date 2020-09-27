@@ -4,22 +4,23 @@ import {InputComponent} from "./InputComponent";
 
 export function ListComponent(props) {
     const [arrayList, setList] = React.useState([
-        {task: <strike>'Prepare breakfast'</strike>},
-        {task: 'Take kids to school'},
-        {task: 'Go to the office'},
-        {task: 'Go to the grocery store'},
-        {task: 'Take kids from school'},
-        {task: 'Prepare dinner'},
-        {task: 'Go to sleep'},
+        {task: 'Prepare breakfast', state: false},
+        {task: 'Take kids to school', state: false},
+        {task: 'Go to the office', state: false},
+        {task: 'Go to the grocery store', state: false},
+        {task: 'Take kids from school', state: false},
+        {task: 'Prepare dinner', state: false},
+        {task: 'Go to sleep', state: false},
     ]);
 
 
-    function taskButton() {
-        console.log('test')
+    function taskButton(el) {
+        el.state = true;
+        console.log(el.state)
     }
 
     function addTask(task) {
-        setList([...arrayList, {task}]);
+        setList([...arrayList, {task: task, state:false}]);
         console.log(arrayList);
     }
 
@@ -30,7 +31,7 @@ export function ListComponent(props) {
 
     function renderTask(el, index) {
         return <div key={index}>
-            <p>{index + 1}. {el.task} <Button onClick={()=>taskButton(el.task)} task={el}>Done</Button></p>
+            <p>{index + 1}. {el.task} <Button onClick={()=>taskButton(el)} task={el}>Done</Button></p>
         </div>;
     }
 
