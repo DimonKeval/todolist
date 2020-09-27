@@ -11,11 +11,13 @@ let arrayList = [
 ];
 
 export function addTask(task){
-    arrayList.push({task: task})
+    console.log(arrayList);
+    arrayList.push({task: task});
+    console.log(arrayList);
 }
 
 export function deleteTask(task){
-    arrayList.filter()
+    arrayList.filter();
 }
 
 function renderTask(el, index){

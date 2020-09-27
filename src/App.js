@@ -7,7 +7,7 @@ import {ListComponent} from "./components/ListComponent";
 export function App() {
   return (<>
       <p>Hello! I'm ToDoList!</p>
-      <TaskButton text='Add a new task to your life!' id='taskButton'/>
+
       <InputComponent/>
       <ListComponent/>
       </>
