@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import {CustomButton} from './components/CustomButton.jsx'
+import {TaskButton} from './components/TaskButton.jsx'
+import {InputComponent} from "./components/InputComponent";
 
-function App() {
+export function App() {
   return (<>
       <p>Hello! I'm ToDoList!</p>
-      <CustomButton text='Add a new task to your life!'/>
+      <TaskButton text='Add a new task to your life!' id='taskButton'/>
+      <InputComponent/>
       </>
   );
 }
