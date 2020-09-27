@@ -13,11 +13,11 @@ export function ListComponent(props) {
         {task: 'Go to sleep', state: false},
     ]);
 
-
     function taskButton(el) {
         el.state = true;
         console.log(el.state)
     }
+
 
     function addTask(task) {
         setList([...arrayList, {task: task, state:false}]);
@@ -32,13 +32,14 @@ export function ListComponent(props) {
     function renderTask(el, index) {
 
         return <div key={index}>
-            <p className='tasks'>{index + 1}. {el.task}<p className='state'> {el.state} </p> <Button onClick={()=>taskButton(el)} task={el}>Done</Button></p>
+            <h5 className='tasks'>{index + 1}. {el.state? el.task = <s className='doneTask'>{el.task}</s> : el.task} <span className='state'> {el.state} </span> <Button onClick={()=>taskButton(el)} task={el}>Done</Button></h5>
         </div>;
     }
 
 
     return <div>
         <InputComponent adding={addTask}/>
+
         {arrayList.map((el, index) =>
             renderTask(el, index))}
     </div>

@@ -41,6 +41,7 @@ body{
   background-color: aqua;
 }
 
+
 .t{
   background-color: green;
 }
@@ -49,4 +50,8 @@ body{
 }
 .state{
   visibility: hidden;
+}
+
+.doneTask{
+  color: red;
 }
