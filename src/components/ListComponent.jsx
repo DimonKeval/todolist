@@ -2,13 +2,13 @@ import React from "react";
 import {Button} from "./Button";
 
 let arrayList = [
-    {task: <strike>'Prepare breakfast'</strike>, button: <button onClick={taskButton}>Done</button>},
-    {task: 'Take kids to school', button: <button onClick={taskButton}>Done</button>},
-    {task: 'Go to the office', button: <button onClick={taskButton}>Done</button>},
-    {task: 'Go to the grocery store', button: <button onClick={taskButton}>Done</button>},
-    {task: 'Take kids from school', button: <button onClick={taskButton}>Done</button>},
-    {task: 'Prepare dinner', button: <button onClick={taskButton}>Done</button>},
-    {task: 'Go to sleep', button: <button onClick={taskButton}>Done</button>},
+    {task: <strike>'Prepare breakfast'</strike>},
+    {task: 'Take kids to school'},
+    {task: 'Go to the office'},
+    {task: 'Go to the grocery store'},
+    {task: 'Take kids from school'},
+    {task: 'Prepare dinner'},
+    {task: 'Go to sleep'},
 ];
 
 
