@@ -7,7 +7,7 @@ export function App() {
   return (<>
       <p>Hello! I'm ToDoList!</p>
 
-      <InputComponent/>
+
       <ListComponent/>
       {/*<Button*/}
       {/*task = 'Task: '*/}

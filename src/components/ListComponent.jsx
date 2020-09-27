@@ -1,45 +1,44 @@
 import React from "react";
 import {Button} from "./Button";
+import {InputComponent} from "./InputComponent";
 
-let arrayList = [
-    {task: <strike>'Prepare breakfast'</strike>},
-    {task: 'Take kids to school'},
-    {task: 'Go to the office'},
-    {task: 'Go to the grocery store'},
-    {task: 'Take kids from school'},
-    {task: 'Prepare dinner'},
-    {task: 'Go to sleep'},
-];
-
-
-export function taskButton(){
-console.log('test')
-}
-
-export function addTask(task){
-    console.log(arrayList);
-    arrayList.push({task: task});
-    ListComponent();
-}
-
-export function deleteTask(taskNumber){
-    const index = arrayList.indexOf(taskNumber - 1);
-    arrayList.splice(index, 1);
-}
-
-function renderTask(el, index){
-    return <div key={index}>
-    <p>{index+1}. {el.task}  <Button onClick={taskButton} task={el}>Done</Button></p>
-    </div>;
-}
+export function ListComponent(props) {
+    const [arrayList, setList] = React.useState([
+        {task: <strike>'Prepare breakfast'</strike>},
+        {task: 'Take kids to school'},
+        {task: 'Go to the office'},
+        {task: 'Go to the grocery store'},
+        {task: 'Take kids from school'},
+        {task: 'Prepare dinner'},
+        {task: 'Go to sleep'},
+    ]);
 
 
-export function ListComponent(props){
+    function taskButton() {
+        console.log('test')
+    }
+
+    function addTask(task) {
+        setList([...arrayList, {task}]);
+        console.log(arrayList);
+    }
+
+    function deleteTask(taskNumber) {
+        const index = arrayList.indexOf(taskNumber - 1);
+        arrayList.splice(index, 1);
+    }
+
+    function renderTask(el, index) {
+        return <div key={index}>
+            <p>{index + 1}. {el.task} <Button onClick={()=>taskButton(el.task)} task={el}>Done</Button></p>
+        </div>;
+    }
+
+
     return <div>
-
-    {arrayList.map((el, index)=>
-    renderTask(el, index))}
-
-</div>
+        <InputComponent adding={addTask}/>
+        {arrayList.map((el, index) =>
+            renderTask(el, index))}
+    </div>
 }
 
