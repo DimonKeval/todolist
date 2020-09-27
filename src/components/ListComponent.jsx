@@ -1,6 +1,6 @@
 import React from "react";
 
-const arrayList = [
+let arrayList = [
     {task: 'Prepare breakfast'},
     {task: 'Take kids to school'},
     {task: 'Go to the office'},
@@ -12,15 +12,16 @@ const arrayList = [
 
 function renderTask(el, index){
     return <div key={index}>
-    <p>{el.task}</p>
+    <p>{index+1}. {el.task}</p>
     </div>;
 }
 
 
 export function ListComponent(props){
+  console.log('alert') ;
     return <div>
     {arrayList.map((el, index)=>
-    renderTask(index, el))}
+    renderTask(el, index))}
 </div>
 }
 
