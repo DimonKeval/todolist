@@ -1,4 +1,5 @@
 import React from "react";
+import {Button} from "./Button";
 
 let arrayList = [
     {task: <strike>'Prepare breakfast'</strike>, button: <button onClick={taskButton}>Done</button>},
@@ -12,7 +13,7 @@ let arrayList = [
 
 
 export function taskButton(){
-
+console.log('test')
 }
 
 export function addTask(task){
@@ -26,7 +27,7 @@ export function deleteTask(taskNumber){
 
 function renderTask(el, index){
     return <div key={index}>
-    <p>{index+1}. {el.task}  {el.button}</p>
+    <p>{index+1}. {el.task}  <Button onClick={taskButton} task={el}>Done</Button></p>
     </div>;
 }
 
