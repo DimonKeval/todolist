@@ -10,6 +10,14 @@ let arrayList = [
     {task: 'Go to sleep'},
 ];
 
+export function addTask(task){
+    arrayList.push({task: task})
+}
+
+export function deleteTask(task){
+    arrayList.filter()
+}
+
 function renderTask(el, index){
     return <div key={index}>
     <p>{index+1}. {el.task}</p>
@@ -18,10 +26,11 @@ function renderTask(el, index){
 
 
 export function ListComponent(props){
-  console.log('alert') ;
     return <div>
+        {addTask('New task')}
     {arrayList.map((el, index)=>
     renderTask(el, index))}
+
 </div>
 }
 
