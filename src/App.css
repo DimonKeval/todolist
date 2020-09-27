@@ -40,3 +40,13 @@
 body{
   background-color: aqua;
 }
+
+.t{
+  background-color: green;
+}
+.f{
+  background-color: red;
+}
+.state{
+  visibility: hidden;
+}

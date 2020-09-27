@@ -30,8 +30,9 @@ export function ListComponent(props) {
     }
 
     function renderTask(el, index) {
+
         return <div key={index}>
-            <p>{index + 1}. {el.task} <Button onClick={()=>taskButton(el)} task={el}>Done</Button></p>
+            <p className='tasks'>{index + 1}. {el.task}<p className='state'> {el.state} </p> <Button onClick={()=>taskButton(el)} task={el}>Done</Button></p>
         </div>;
     }
 
