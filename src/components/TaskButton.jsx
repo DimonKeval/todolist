@@ -1,5 +1,5 @@
 import React from "react";
-import {App} from "/Users/pitmanus/IdeaProjects/todolist2/src/App.js"
+import {App} from "../App"
 export function TaskButton(props) {
     return <button id={props.id}>{props.text}</button>
 
