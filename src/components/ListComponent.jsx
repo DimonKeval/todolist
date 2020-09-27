@@ -14,8 +14,9 @@ export function addTask(task){
     arrayList.push({task: task})
 }
 
-export function deleteTask(task){
-    arrayList.filter()
+export function deleteTask(taskNumber){
+    const index = arrayList.indexOf(taskNumber - 1);
+    arrayList.splice(index, 1);
 }
 
 function renderTask(el, index){
@@ -27,7 +28,6 @@ function renderTask(el, index){
 
 export function ListComponent(props){
     return <div>
-        {addTask('New task')}
     {arrayList.map((el, index)=>
     renderTask(el, index))}
 
