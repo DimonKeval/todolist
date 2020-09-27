@@ -17,7 +17,9 @@ console.log('test')
 }
 
 export function addTask(task){
-    arrayList.push({task: task, button: <button onClick={taskButton}>Done</button>})
+    console.log(arrayList);
+    arrayList.push({task: task});
+    ListComponent();
 }
 
 export function deleteTask(taskNumber){
@@ -34,7 +36,7 @@ function renderTask(el, index){
 
 export function ListComponent(props){
     return <div>
-        {addTask('Task')}
+
     {arrayList.map((el, index)=>
     renderTask(el, index))}
 

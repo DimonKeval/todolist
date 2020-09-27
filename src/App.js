@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
-import {TaskButton} from './components/TaskButton.jsx'
 import {InputComponent} from "./components/InputComponent";
 import {ListComponent} from "./components/ListComponent";
-import {Button} from "./components/Button";
 
 export function App() {
   return (<>
@@ -11,10 +9,10 @@ export function App() {
 
       <InputComponent/>
       <ListComponent/>
-      <Button
-      task = 'Task: '
-      onClick={()=>{}}
-      />
+      {/*<Button*/}
+      {/*task = 'Task: '*/}
+      {/*onClick={()=>{}}*/}
+      {/*/>*/}
       </>
   );
 }

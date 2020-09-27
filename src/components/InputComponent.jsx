@@ -5,7 +5,7 @@ import {addTask} from "./ListComponent";
 export function InputComponent(props){
 
     function sendTask(){
-        console.log("input send" + text);
+        console.log("input send:  " + text);
         addTask(text);
     }
 
